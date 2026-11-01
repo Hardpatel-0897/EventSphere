@@ -1,9 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { Compass, Sparkles } from "lucide-react";
+import { ChevronRight, Compass, Flame, Sparkles } from "lucide-react";
 import React from "react";
 import { Link } from "react-router";
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import FeaturedCarousel from "@/components/FeaturedCarousel";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
