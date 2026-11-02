@@ -5,6 +5,7 @@ import { Button } from "./ui/button";
 import { ArrowRight, Calendar, ChevronLeft, ChevronRight, MapPin, Sparkles } from "lucide-react";
 import { Link } from "react-router";
 import { Badge } from "./ui/badge";
+import { formatEventDate, formatPrice } from "@/lib/utils";
 
 function FeaturedCarousel({ events }) {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -96,7 +97,7 @@ function FeaturedCarousel({ events }) {
                       <span className="flex items-center gap-1.5 text-orange-300 font-semibold">
                         <Calendar className="w-4 h-4" />
                         {/* {formatEventDate(event.startDate)} */}
-                        {event.startDate}
+                        {formatEventDate(event.startDate)}
                       </span>
                       <span className="flex items-center gap-1.5 text-stone-300">
                         <MapPin className="w-4 h-4 text-stone-400" />
@@ -104,7 +105,7 @@ function FeaturedCarousel({ events }) {
                       </span>
                       <span className="flex items-center gap-1.5 font-bold text-white bg-white/10 px-2.5 py-1 rounded-lg border border-white/10">
                         {/* {formatPrice(event.price, event.currency)} */}
-                        {event.price}
+                        {formatPrice(event.price, event.currency)}
                       </span>
                     </div>
 
